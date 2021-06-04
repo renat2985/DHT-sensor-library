@@ -258,7 +258,8 @@ bool DHT::read(bool force) {
   switch (_type) {
   case DHT22:
   case DHT21:
-    delayMicroseconds(1100); // data sheet says "at least 1ms"
+    delayMicroseconds(500); // Fix for SONOFF sensor SI7021
+    //delayMicroseconds(1100); // data sheet says "at least 1ms"
     break;
   case DHT11:
   default:
